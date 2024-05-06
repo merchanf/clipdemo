@@ -115,7 +115,7 @@ a.more {
 }
 @media (min-width: 992px) {
   .hero {
-    padding: calc(8rem - 30px) 0 8rem 0;
+    padding: calc(4rem - 30px) 0 2rem 0;
   }
 }
 .hero .intro-excerpt {
@@ -273,24 +273,29 @@ a.more {
   text-decoration: none;
 }
 .product-section .product-item .icon-cross {
+  display: none;
+}
+.product-section .active-product-item .icon-cross {
+  color: #ffffff;
   position: absolute;
-  width: 35px;
   height: 35px;
   display: inline-block;
   background: #2f2f2f;
-  bottom: 15px;
+  bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   margin-bottom: -17.5px;
-  border-radius: 50%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  transition: 0.3s all ease;
+  opacity: 1;
+  visibility: visible;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
 }
+
 .product-section .product-item .icon-cross img {
   position: absolute;
   left: 50%;
@@ -310,37 +315,38 @@ a.more {
   cursor: pointer;
 }
 
+@keyframes twinkle {
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.product-section .active-product-item:after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  background: transparent;
+  height: 70%;
+  z-index: -1;
+  border: 3px solid #3b5d50;
+  border-radius: 10px;
+}
+
 .product-section .active-product-item:before {
   bottom: 0;
   left: 0;
   right: 0;
   position: absolute;
   content: "";
-  background: #dce5e4;
-  height: 0%;
+  background: #768e85;
+  height: 70%;
   z-index: -1;
   border-radius: 10px;
-  -webkit-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-}
-
-.product-section .container .row div:first-child .product-item:hover {
-  top: -25px;
-}
-
-.product-section .product-item:hover .icon-cross {
-  bottom: 0;
-  opacity: 1;
-  visibility: hidden;
-}
-.product-section .active-product-item:hover .icon-cross {
-  bottom: 0;
-  opacity: 1;
-  visibility: visible;
-}
-.product-section .product-item:hover:before {
-  height: 70%;
+  animation-name: twinkle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .why-choose-section {
@@ -896,4 +902,7 @@ textarea {
   height: 50px;
   border-radius: 50%;
   background: rgba(59, 93, 80, 0.2);
+}
+.disabled {
+  cursor: not-allowed;
 }
