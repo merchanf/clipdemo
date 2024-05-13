@@ -269,6 +269,10 @@
                         <td>$1,000.00</td>
                       </tr>
                       <tr>
+                        <td>Envío</td>
+                        <td>$0.00</td>
+                      </tr>
+                      <tr>
                         <td class="text-black font-weight-bold">
                           <strong>Subtotal carrito</strong>
                         </td>
@@ -302,6 +306,12 @@
                       <div class="py-2">
                         <p class="mb-0">
                           Serás redirigido a una página en el ambiente de Clip. Ahí ingresarás las credenciales de prueba para el pago demo.
+                        <button
+                      class="btn btn-black btn-lg py-3 btn-block"
+                      onclick="window.location='thankyou.html'"
+                    >
+                      Pagar
+                    </button>
                         </p>
                       </div>
                     </div>
@@ -338,7 +348,32 @@
                         role="button"
                         aria-expanded="false"
                         aria-controls="collapsepaypal"
-                        >Checkout Transparente/Nativo</a
+                        >Checkout Transparente/Nativo (NUEVO!)</a
+                      >
+                    </h3>
+
+                    <div class="collapse" id="collapsepaypal">
+                      <div class="py-2">
+                        <p class="mb-0">
+                          Make your payment directly into our bank account.
+                          Please use your Order ID as the payment reference.
+                          Your order won’t be shipped until the funds have
+                          cleared in our account.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                                    <div class="border p-3 mb-5">
+                    <h3 class="h6 mb-0">
+                      <a
+                        class="d-block"
+                        data-bs-toggle="collapse"
+                        href="#collapsepaypal"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapsepaypal"
+                        >Suscribirte a nuestros plan (NUEVO!)</a
                       >
                     </h3>
 
