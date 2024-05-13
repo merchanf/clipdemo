@@ -326,7 +326,7 @@
                         role="button"
                         aria-expanded="false"
                         aria-controls="collapsecheque"
-                        >Checkout Embebido</a
+                        >Checkout Embebido (test)</a
                       >
                     </h3>
 
@@ -334,7 +334,7 @@
                       <div class="py-2">
                         <p class="mb-0">
                           En esta opción de pago, se abrirá un popup dentro de la tienda, donde deberás ingresar las credenciales de testing para finalizar con el flujo de compra.
-                        <button class="btn btn-black btn-lg py-3 btn-block" onclick="windows.location.href = 'https://www.example.com'"> Pagar 
+                        <button class="btn btn-black btn-lg py-3 btn-block" onclick="hrefFunction()"> Pagar 
                           </button>
                         </p>
                       </div>
@@ -536,7 +536,12 @@
       </div>
     </footer>
     <!-- End Footer Section -->
-
+    <script>
+    //Function demonstrating the Href Method
+    function hrefFunction(){
+    windows.location.href = "https://www.example.com";
+            }
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
