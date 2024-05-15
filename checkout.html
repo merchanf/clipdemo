@@ -323,7 +323,7 @@
                         role="button"
                         aria-expanded="false"
                         aria-controls="collapsecheque"
-                        >Checkout Embebido (test)</a
+                        >Checkout Embebido</a
                       >
                     </h3>
 
@@ -350,21 +350,54 @@
                       <a
                         class="d-block"
                         data-bs-toggle="collapse"
-                        href="#collapsepaypal"
+                        href="#collapsetransparent"
                         role="button"
                         aria-expanded="false"
-                        aria-controls="collapsepaypal"
+                        aria-controls="collapsetransparent"
                         >Checkout Transparente/Nativo (NUEVO!)</a
                       >
                     </h3>
 
-                    <div class="collapse" id="collapsepaypal">
+                    <div class="collapse" id="collapsetransparent">
                       <div class="py-2">
                         <p class="mb-0">
-                          Make your payment directly into our bank account.
-                          Please use your Order ID as the payment reference.
-                          Your order won’t be shipped until the funds have
-                          cleared in our account.
+                                    <div class="col-50">
+                                    <h3>Payment</h3>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                      <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                      <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                      <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                      <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                    <div class="row">
+                                      <div class="col-50">
+                                        <label for="expyear">Exp Year</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                      </div>
+                                      <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                <label>
+                                  <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                                </label>
+                                <input type="submit" value="Continue to checkout" class="btn">
+                              </form>
+                            </div>
+                          </div>
+                          
+                        </div>
                         </p>
                       </div>
                     </div>
@@ -386,11 +419,10 @@
                     <div class="collapse" id="collapsesubscription">
                       <div class="py-2">
                         <p class="mb-0">
-                          Make your payment directly into our bank account.
-                          Please use your Order ID as the payment reference.
-                          Your order won’t be shipped until the funds have
-                          cleared in our account.
-                          <button onclick="location.href = 'www.yoursite.com';" id="myButton" class="float-left submit-button" >Home</button>
+                          ¡Prueba las nuevas suscripciones mensuales de nuestros muebles, recibirás descuéntos increibles!<br>
+                          <button class="btn btn-black btn-lg py-3 btn-block" onclick="location.href = 'https://pago.clip.mx/suscripcion/82f1ff17-78ab-4da2-afac-e0dc51665ef4'">
+                          Pagar
+                        </button>
                         </p>
                       </div>
                     </div>
