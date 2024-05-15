@@ -305,10 +305,10 @@
                     <div class="collapse" id="collapsebank">
                       <div class="py-2">
                         <p class="mb-0">
-                          Serás redirigido a una página en el ambiente de Clip. Ahí ingresarás las credenciales de prueba para el pago demo.
+                          Serás redirigido a una página en el ambiente de Clip. Ahí ingresarás las credenciales de prueba para el pago demo para que puedas culminar con el pago.
                         <button
                       class="btn btn-black btn-lg py-3 btn-block"
-                      onclick="window.location='thankyou.html'"
+                      onclick="location.href = 'https://pago.clip.mx/cc8b5003-cf55-422d-9c48-11f0a889afb5'"
                           >
                       Pagar
                     </button>
@@ -334,8 +334,15 @@
                       <div class="py-2">
                         <p class="mb-0">
                           En esta opción de pago, se abrirá un popup dentro de la tienda, donde deberás ingresar las credenciales de testing para finalizar con el flujo de compra.
-                        <button class="btn btn-black btn-lg py-3 btn-block" onclick="hrefFunction()"> Pagar 
-                          </button>
+                       <!-- <button class="btn btn-black btn-lg py-3 btn-block" onclick="location.href = 'www.yoursite.com'> Pagar 
+                          </button> -->
+                          <button class="clipCheckoutButton" ></button>
+                          <script 
+                            id="checkoutClipPlugin" 
+                            payment_request_id="cc8b5003-cf55-422d-9c48-11f0a889afb5" 
+                            type="module" src="https://sdk.clip.mx/js/v1/checkout.js">
+                          </script>
+
                         </p>
                       </div>
                     </div>
@@ -386,6 +393,7 @@
                           Please use your Order ID as the payment reference.
                           Your order won’t be shipped until the funds have
                           cleared in our account.
+                          <button onclick="location.href = 'www.yoursite.com';" id="myButton" class="float-left submit-button" >Home</button>
                         </p>
                       </div>
                     </div>
